@@ -141,6 +141,18 @@ function stopTimer() {
   seconds.disabled = false;
 }
 
+function pauseTimer() {
+  // stop the counting process
+  clearInterval(intervalID);
+
+  // If you want the timer to be able to pause the countdown and then continue from
+  // where it left off, then uncomment out the following 2 lines of code:
+  // reset the user input minutes and seconds
+  // to reflect the time left in the countdown after it was paused in the middle
+
+  minutes.value = minutesLeft;
+  seconds.value = secondsLeft;
+}
 async function displayCat() {
   /*spinner.style.display = "block";*/
   /* or use the . before the class name to refer to the class:

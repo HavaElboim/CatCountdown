@@ -86,7 +86,7 @@ button {
     rgba(104, 106, 108, 1) 100%
   );
   margin: 2px;
-  border-color: darkgoldenrod;
+  border-color: rgb(30, 4, 34);
   padding: 10px;
   font-size: 15px;
   color: purple;

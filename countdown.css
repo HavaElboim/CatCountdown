@@ -1,0 +1,144 @@
+.timerCase {
+  max-width: 400px;
+  max-height: 300px;
+  padding: 20px;
+  border: 10px;
+  margin: 5px;
+  background: rgb(104, 106, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(104, 106, 108, 1) 0%,
+    rgba(223, 223, 235, 1) 35%,
+    rgba(252, 252, 252, 1) 59%,
+    rgba(157, 134, 167, 1) 100%
+  );
+  border-radius: 15px 50px;
+  border-color: darkgoldenrod;
+}
+
+.innerSection {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  height: 100%;
+}
+.wrapper {
+  display: grid;
+  /*
+  grid-template-areas:
+    "minsInput blank1 secsInput"
+    "blank2 displayTimer blank3"
+    "buttonStart blank4 buttonStop"
+    "blank4 displayPicture blank5";
+    */
+  grid-template-rows: 0.3fr 0.5fr 0.5fr 1fr;
+  grid-template-columns: 0.8fr 1fr 0.8fr;
+}
+
+.displaytimercontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-items: stretch;
+}
+.displayMins {
+  flex-grow: 1;
+}
+
+div[id="displayMins"],
+div[id="displayColon"],
+div[id="displaySecs"] {
+  font-size: 30px;
+  font-family: arial;
+  color: purple;
+}
+
+input {
+  width: 30%;
+  height: 50%;
+  text-align: center;
+  border: 2px;
+  border-color: gray;
+  border-radius: 5px 15px;
+  color: purple;
+  font-family: arial;
+  font-size: 15px;
+}
+
+label {
+  color: purple;
+  font: arial;
+  font-size: 20px;
+  font-family: arial;
+  padding-right: 4px;
+}
+
+button {
+  border-radius: 15px 30px;
+  background: rgb(104, 106, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(157, 134, 167, 1) 0%,
+    rgba(223, 223, 235, 1) 35%,
+    rgba(252, 252, 252, 1) 59%,
+    rgba(104, 106, 108, 1) 100%
+  );
+  margin: 2px;
+  border-color: darkgoldenrod;
+  padding: 10px;
+  font-size: 15px;
+  color: purple;
+}
+
+.displayPicture {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100px;
+  border-radius: 15px 30px;
+  margin: 2px;
+}
+
+/* don't show arrows inside number input field:  (different definitions for different browsers)*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* spinner to display while cat image is loading: */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

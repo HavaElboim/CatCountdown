@@ -141,6 +141,14 @@ function stopTimer() {
   seconds.disabled = false;
 }
 
+function pauseTimer() {
+  // stop the counting process
+  clearInterval(intervalID);
+
+  minutes.value = minutesLeft;
+  seconds.value = secondsLeft;
+}
+
 async function displayCat() {
   /*spinner.style.display = "block";*/
   /* or use the . before the class name to refer to the class:

@@ -96,8 +96,8 @@ button {
 button:hover {
   background: linear-gradient(
     90deg,
-    rgb(157, 104, 167, 1) 0%,
-    rgba(223, 193, 235, 1) 35%,
+    rgb(28, 3, 250),
+    rgb(19, 201, 247) 35%,
     rgba(252, 222, 252, 1) 59%,
     rgba(104, 76, 108, 1) 100%
   );

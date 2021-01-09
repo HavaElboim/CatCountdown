@@ -12,9 +12,6 @@
     rgba(252, 252, 252, 1) 59%,
     rgba(157, 134, 167, 1) 100%
   );
-  background-image: url("https://images.pexels.com/photos/1095601/pexels-photo-1095601.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-  background-size: 400px;
-  opacity: 0.5;
   border-radius: 15px 50px;
   border-color: darkgoldenrod;
 }

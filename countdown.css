@@ -101,6 +101,7 @@ button:hover {
     rgba(252, 222, 252, 1) 59%,
     rgba(104, 76, 108, 1) 100%
   );
+  border-color: crimson;
 }
 
 .displayPicture {

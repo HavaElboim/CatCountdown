@@ -55,7 +55,7 @@ div[id="displayColon"],
 div[id="displaySecs"] {
   font-size: 30px;
   font-family: arial;
-  color: purple;
+  color: white;
 }
 
 input {
@@ -71,29 +71,32 @@ input {
 }
 
 label {
-  color: purple;
+  color: rgb(99, 54, 4);
   font: arial;
   font-size: 20px;
   font-family: arial;
+  font-weight: bolder;
   padding-right: 4px;
+  background-color: blanchedalmond;
+  border-radius: 5px 10px;
 }
 
 button {
   cursor: pointer;
   border-radius: 15px 30px;
-  background: rgb(104, 106, 108);
+  background: rgb(218, 179, 6);
   background: linear-gradient(
     90deg,
-    rgba(157, 134, 167, 1) 0%,
-    rgba(223, 223, 235, 1) 35%,
-    rgba(252, 252, 252, 1) 59%,
-    rgba(104, 106, 108, 1) 100%
+    rgb(167, 114, 2) 0%,
+    rgb(248, 170, 2) 35%,
+    rgba(253, 200, 23, 0.644) 59%,
+    rgba(201, 171, 3, 0.438) 100%
   );
   margin: 2px;
   border-color: rgb(30, 4, 34);
   padding: 10px;
   font-size: 15px;
-  color: purple;
+  color: black;
 }
 
 button:hover {

@@ -118,6 +118,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.spinnercontainer {
+  display: flex;
+  justify-content: center;
+}
 /* spinner to display while cat image is loading: */
 .lds-dual-ring {
   display: inline-block;

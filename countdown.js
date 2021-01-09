@@ -166,8 +166,6 @@ async function displayCat() {
 
   //use onload to vanish the spinner only once the image has finished loading:
   catImageSrc.onload = function () {
-    //spinner.style.display = "none";
-
     document.querySelector(".lds-dual-ring").style.display = "none";
     //document.querySelector("img").style.display = "inline";
   };

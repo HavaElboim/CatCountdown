@@ -168,5 +168,11 @@ async function displayCat() {
   catImageSrc.onload = function () {
     document.querySelector(".lds-dual-ring").style.display = "none";
     //document.querySelector("img").style.display = "inline";
+    setTimeout(function () {
+      catImageSrc.style.display = "none";
+    }, 3000);
+    catImageSrc.style.display = "inline-block"; //אחרי שטוען את התמונה חושף אותה
+    // //מסתיר את התמונה כדי לא לשנות את גודל הרקע
+    //document.querySelector("img").style.display = "inline";
   };
 }

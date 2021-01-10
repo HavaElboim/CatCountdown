@@ -163,6 +163,7 @@ async function displayCat() {
   var json = await result.json();
 
   catImageSrc.src = json.file;
+  catImageSrc.style.display = "none"; //מסתיר את התמונה כדי לא לשנות את גודל הרקע
 
   //use onload to vanish the spinner only once the image has finished loading:
   catImageSrc.onload = function () {
@@ -174,5 +175,6 @@ async function displayCat() {
     catImageSrc.style.display = "inline-block"; //אחרי שטוען את התמונה חושף אותה
     // //מסתיר את התמונה כדי לא לשנות את גודל הרקע
     //document.querySelector("img").style.display = "inline";
+
   };
 }

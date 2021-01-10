@@ -12,7 +12,7 @@
     rgba(252, 252, 252, 1) 59%,
     rgba(157, 134, 167, 1) 100%
   );
-  background-image: url("https://images.pexels.com/photos/1095601/pexels-photo-1095601.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-image: url("https://images.pexels.com/photos/414667/pexels-photo-414667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
   background-size: 400px;
   opacity: 0.5;
   border-radius: 15px 50px;
@@ -71,14 +71,14 @@ input {
 }
 
 label {
-  color: rgb(99, 54, 4);
+  color: white;
   font: arial;
   font-size: 20px;
   font-family: arial;
   font-weight: bolder;
   padding-right: 4px;
-  background-color: blanchedalmond;
-  border-radius: 5px 10px;
+  /*background-color: blanchedalmond;
+  border-radius: 5px 10px;*/
 }
 
 button {

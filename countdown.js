@@ -54,22 +54,24 @@ function enforceMax(el) {
   }
 }
 
-function updateTimerDisplay() {
-  // better to use .innerText than .innerHTML
-  document.querySelector("#displayMins").innerHTML = minutesLeft;
-  // make sure seconds value between 0 and 9 get converted to 2-digit format:
-  document.querySelector("#displaySecs").innerHTML =
-    secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
-}
-
+// function updateTimerDisplay() {
+//   // better to use .innerText than .innerHTML
+//   document.querySelector("#displayMins").innerHTML = minutesLeft  > 10 ? "0" + minutesLeft : minutesLeft;
+//   // make sure seconds value between 0 and 9 get converted to 2-digit format:
+//   document.querySelector("#displaySecs").innerHTML =
+//     secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
+// }
+var buttonStartMode = false;
 function startTimer() {
   // reset cat image to blank (in case there's an image left from a previous countdown)
+  if (!buttonStartMode) {
+    
+  buttonStartMode = true;
   catImageSrc.src = "";
   catImageSrc.src.display = "none";
   //if no value entered for minutes, set minutes to zero
-  minutes.value = minutes.value === "" ? 0 : minutes.value;
-  seconds.value = seconds.value === "" ? 0 : seconds.value;
-
+  minutes.value = minutes.value === "" ? "0" : minutes.value;
+  seconds.value = seconds.value === "" ? "0" : seconds.value;
   /* instead of having a separate display for mins, : and secs,
 define them all as an element called clock,
 and then use:
@@ -80,17 +82,20 @@ clock.innerText = (mins<0? ("0" + mins):mins ) + ":" + ((secs<0? ("0"+secs): sec
   seconds.disabled = true;
 
   //don't start counting time if a zero time length has been entered
-  if (minutes.value === 0 && seconds.value === 0) {
-    return 0;
-  }
+  // if (minutes.value === 0 && seconds.value === 0) {
+  //   return 0;
+  // }
 
   //display the countdown on the screen
   minutesLeft = minutes.value;
   secondsLeft = seconds.value;
-  updateTimerDisplay();
+  // updateTimerDisplay();
 
   //start counting down time with intervals of one second (= 1000 miliseconds)
   intervalID = setInterval(function () {
+    document.querySelector("#displayMins").innerHTML = minutesLeft  < 10 ? "0" + minutesLeft : minutesLeft;
+    // make sure seconds value between 0 and 9 get converted to 2-digit format:
+    document.querySelector("#displaySecs").innerHTML = secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
     if (secondsLeft == 0) {
       // use == and not === because we need to convert the string seconds.value to a number
       if (minutesLeft == 0) {
@@ -120,7 +125,8 @@ clock.innerText = (mins<0? ("0" + mins):mins ) + ":" + ((secs<0? ("0"+secs): sec
       secondsLeft--;
     }
     updateTimerDisplay();
-  }, 1000);
+  }, 1000);}
+
 }
 
 function stopTimer() {
@@ -139,6 +145,8 @@ function stopTimer() {
   //allow back input into input fields:
   minutes.disabled = false;
   seconds.disabled = false;
+
+  buttonStartMode = false;
 }
 
 function pauseTimer() {
@@ -152,6 +160,8 @@ function pauseTimer() {
 
   minutes.value = minutesLeft;
   seconds.value = secondsLeft;
+
+  buttonStartMode = false;
 }
 async function displayCat() {
   /*spinner.style.display = "block";*/
@@ -164,7 +174,7 @@ async function displayCat() {
 
   catImageSrc.src = json.file;
   catImageSrc.style.display = "none"; //מסתיר את התמונה כדי לא לשנות את גודל הרקע
-
+  buttonStartMode = false;
   //use onload to vanish the spinner only once the image has finished loading:
   catImageSrc.onload = function () {
     document.querySelector(".lds-dual-ring").style.display = "none";

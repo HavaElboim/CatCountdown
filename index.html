@@ -13,12 +13,13 @@
       type="text/css"
       href="https://ganlanyuan.github.io/tiny-slider/demo/css/styles.css"
     />
-    <title>Hiking boots sale</title>
+    <title>Hava Elboim</title>
   </head>
   <body>
-    <h1 style="text-align: center; margin: 10px">Trekkers Hiking Boots Sale</h1>
+    <h1 style="text-align: center; margin: 10px">Hava Elboim</h1>
     <!-- the slider images display is taken from the library published at:
     https://github.com/ganlanyuan/tiny-slider -->
+    <!--
     <div class="tns-outer" id="base-ow">
       <div class="tns-inner" id="base-mw">
         <div class="item tns-item" id="base-item0">
@@ -62,88 +63,10 @@
           />
         </div>
       </div>
-      <!-- end of div of tns-inner-->
+   
     </div>
-    <!-- end of div of tns-outer-->
-    <!-- end of HTML for slideshow-->
+-->
 
-    <!-- HTML for credit card-->
-    <h3 style="text-align: center; padding-top: 5px">
-      Pay for your hiking boots
-    </h3>
-    <div
-      style="
-        text-align: center;
-        color: grey;
-        margin-bottom: 10px;
-        font-size: 12px;
-      "
-    >
-      Fill in your credit card details here:
-    </div>
-    <div style="float: left">
-      <style>
-        .ca rd-container {
-          width: 100%;
-          max-width: 350px;
-          margin: 10px auto;
-        }
-
-        form {
-          margin: 10px;
-        }
-        input {
-          width: 200px;
-          margin: 10px auto;
-          display: block;
-        }
-      </style>
-      <!-- internal style sheet to make the credit card form and display sit side by side-->
-      <style>
-        .form-container {
-          float: left;
-          margin-left: 50px;
-        }
-
-        .jp-card-container {
-          float: right;
-        }
-      </style>
-      <div>
-        <div style="align-items: center">
-          <div style="display: inline-block">
-            <div class="card-container">
-              <div class="card-wrapper">
-                <div class="form-container active">
-                  <form action="">
-                    <input placeholder="Card number" type="tel" name="number" />
-                    <!-- need separate first and last names to correspond to the 
-                    separate fields 'input[name="first-name"], input[name="last-name"]',
-                     in the nameInput formSelectors: in the script at the end of the file
-                    -->
-                    <input
-                      placeholder="First name"
-                      type="text"
-                      name="first-name"
-                    />
-                    <input
-                      placeholder="Last name"
-                      type="text"
-                      name="last-name"
-                    />
-                    <input placeholder="MM/YY" type="tel" name="expiry" />
-                    <input placeholder="CVC" type="number" name="cvc" />
-                  </form>
-                </div>
-                <!-- end of form-container-->
-              </div>
-              <!-- end of card-wrapper-->
-            </div>
-            <!-- end of card-container-->
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- javascript source for slideshow:-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
@@ -168,22 +91,6 @@
           },
         },
       });
-    </script>
-    <!-- the credit card display is taken from the credit card library which is
-    published as: https://github.com/jessepollak/card-->
-    <!-- javascript source for credit card display-->
-    <!-- CSS is included via this JavaScript file -->
-    <script src="https://rawgit.com/jessepollak/card/master/dist/card.js"></script>
-    <script>
-      console.log("creating new card");
-      var card = new Card({
-        form: "form",
-        container: ".card-wrapper",
-        formSelectors: {
-          nameInput: 'input[name="first-name"], input[name="last-name"]',
-        },
-      });
-      console.log("finished new card");
     </script>
   </body>
 </html>

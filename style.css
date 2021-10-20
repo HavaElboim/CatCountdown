@@ -1,0 +1,27 @@
+body {
+    background-color: mintcream;
+}
+
+a {
+    /* background-color: brown; */
+    height: 2em;
+
+}
+
+.portrait-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.portrait-img {
+    width: 30vw;
+    border-radius: 15vw;
+}
+
+.links-div {
+    margin-top: 5em;
+    display: flex;
+    background-color: mintcream;
+    flex-direction: column;
+    align-items: center;
+}
